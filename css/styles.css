@@ -107,7 +107,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #263039;
+  background-color: #252d37;
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
@@ -129,8 +129,8 @@ p {
 
 .rating-btn {
   cursor: pointer;
-  background-color: #262f38;
-  color: #747d86;
+  background-color: #252d37;
+  color: #7c8798;
   border: none;
   border-radius: 50%;
   height: 3rem;
@@ -142,7 +142,7 @@ p {
 }
 
 .rating-btn:hover {
-  background-color: #7c8898;
+  background-color: #7c8798;
   color: white;
 }
 
@@ -206,6 +206,6 @@ p {
   color: #fb7413;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  background-color: #262f38;
+  background-color: #252d37;
 }
 /*# sourceMappingURL=styles.css.map */

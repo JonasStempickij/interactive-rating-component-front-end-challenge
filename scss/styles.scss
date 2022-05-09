@@ -6,7 +6,7 @@ $primary: hsl(25, 97%, 53%);
 $light-grey: hsl(217, 12%, 63%);
 $medium-grey: hsl(216, 12%, 54%);
 $dark-blue: hsl(213, 19%, 18%);
-$very-dark-blue: hsl(216, 12%, 8%);
+$very-dark-blue: hsl(228, 11%, 9%);
 
 /*
     Import google font Overpass
@@ -68,7 +68,7 @@ body{
     align-items: center;
     font-family: 'Overpass',sans-serif;
     font-size: 15px;
-    background-color: hsl(228, 11%, 9%);
+    background-color: $very-dark-blue;
     color: white;
 }
 
@@ -98,7 +98,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #263039;
+    background-color: $dark-blue;
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
@@ -113,8 +113,8 @@ p {
 
 .rating-btn {
     cursor: pointer;
-    background-color: #262f38;
-    color: #747d86;
+    background-color: $dark-blue;
+    color: $medium-grey;
     border: none;
     border-radius: 50%;
     height: 3rem;
@@ -124,7 +124,7 @@ p {
 }
 
 .rating-btn:hover {
-    background-color: #7c8898;
+    background-color: $medium-grey;
     color: white;
 
 }
@@ -169,5 +169,5 @@ p {
     color: $primary;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
-    background-color: #262f38;
+    background-color: $dark-blue;
 }
