@@ -5,9 +5,18 @@ const ratingSelected = document
   .forEach((rating) => {
     rating.addEventListener('click', () => {
       const buttonId = rating.id;
+      setActive(buttonId);
       ratingResult.innerHTML = buttonId;
     });
   });
+
+const setActive = (active) => {
+  document.querySelectorAll('.rating-btn').forEach((rating) => {
+    if (rating.id !== active) {
+      rating.className = 'rating-btn';
+    } else rating.className = 'rating-btn active';
+  });
+};
 
 const onSubmit = document
   .querySelector('.submit-btn')
