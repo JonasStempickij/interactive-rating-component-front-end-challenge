@@ -56,8 +56,9 @@ Users should be able to:
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+transition: {
+  color: ease-in 0.2s;
+  background-color: ease-in 0.2s;
 }
 ```
 

@@ -20,6 +20,7 @@
 */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /*
@@ -86,15 +87,23 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 435px;
-  height: 435px;
   background-color: #1a212b;
   border-radius: 1.5rem;
   row-gap: 1.5rem;
   padding: 2rem;
+}
+
+@media (min-width: 490px) {
+  .rating-card {
+    width: 400px;
+    height: 420px;
+  }
 }
 
 .star-icon {
@@ -135,10 +144,8 @@ p {
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
-  -webkit-transition: color ease-in 0.2s;
-  transition: color ease-in 0.2s;
-  -webkit-transition: background-color ease-in 0.2s;
-  transition: background-color ease-in 0.2s;
+  transition-color: ease-in 0.2s;
+  transition-background-color: ease-in 0.2s;
 }
 
 .rating-btn:hover {
@@ -161,10 +168,8 @@ p {
   background-color: #fb7413;
   color: white;
   text-transform: uppercase;
-  -webkit-transition: color ease-in 0.2s;
-  transition: color ease-in 0.2s;
-  -webkit-transition: background-color ease-in 0.2s;
-  transition: background-color ease-in 0.2s;
+  transition-color: ease-in 0.2s;
+  transition-background-color: ease-in 0.2s;
 }
 
 .submit-btn:hover {
@@ -180,11 +185,12 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 435px;
-  height: 435px;
   background-color: #1a212b;
   border-radius: 1.5rem;
   row-gap: 1.5rem;
@@ -196,6 +202,13 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 490px) {
+  .thank-you-card {
+    width: 400px;
+    height: 420px;
+  }
 }
 
 .thank-you-card p {
