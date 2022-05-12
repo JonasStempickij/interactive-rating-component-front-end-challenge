@@ -6,12 +6,11 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Solution](#solution)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -26,6 +25,11 @@ Users should be able to:
 - See hover states for all interactive elements on the page ✅
 - Select and submit a number rating ✅
 - See the "Thank you" card state after submitting a rating ✅
+
+🌟Extra added 🌟
+
+- Star animation added 🌟
+- Input validation and error message 🔴
 
 ### Solution
 
@@ -49,34 +53,55 @@ Users should be able to:
 
 ### What I learned
 
-- I learned how to do work i
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- Simple pulse animation for little star image
 
 ```css
-transition: {
-  color: ease-in 0.2s;
-  background-color: ease-in 0.2s;
+@keyframes pulse {
+  from {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+.star-icon img {
+  animation: pulse 3s infinite;
 }
 ```
 
+- Javascript code for validating user input and show error message
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
+/* if rating provided on submit hide rating card and show thank you card 
+else show error with 5000ms timeout
+*/
+const onSubmit = document
+  .querySelector('.submit-btn')
+  .addEventListener('click', () => {
+    if (ratingResult.innerHTML) {
+      const thankYouCard = document.querySelector('.thank-you-card');
+      thankYouCard.style.display = 'flex';
+      const ratingCard = document.querySelector('.rating-card');
+      ratingCard.style.display = 'none';
+    } else {
+      const error = document.querySelector('.error');
+      error.style.display = 'block';
+      setTimeout(() => {
+        error.style.display = 'none';
+      }, '5000');
+    }
+  });
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 ### Useful resources
 
-- [Inkscape](https://inkscape.org/) - Used inkscape for color pick tool
+- [Frontend Mentor Community](https://www.frontendmentor.io/home) - shout out to the #help channel :+1:
 
 ## Author
 

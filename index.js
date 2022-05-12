@@ -8,7 +8,9 @@ const ratingSelected = document
     });
   });
 
-// On submit hide rating card and show thank you card
+/* if rating provided on submit hide rating card and show thank you card 
+else show error with 5000ms timeout
+*/
 const onSubmit = document
   .querySelector('.submit-btn')
   .addEventListener('click', () => {
