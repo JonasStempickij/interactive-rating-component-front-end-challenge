@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>Interactive rating component | Frontend Challenge</title>
-  </head>
-  <body>
-    <main>
-      <!-- Rating state start -->
-      <div class="rating-card">
-        <div class="star-icon">
-          <img src="images/icon-star.svg" alt="" />
-        </div>
-        <h1>How did we do?</h1>
-        <p>
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-        <div class="rating">
-          <button class="rating-btn" id="1">1</button>
-          <button class="rating-btn" id="2">2</button>
-          <button class="rating-btn" id="3">3</button>
-          <button class="rating-btn" id="4">4</button>
-          <button class="rating-btn" id="5">5</button>
-        </div>
-        <button class="submit-btn" id="submit-id">Submit</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Interactive rating component | Frontend Challenge</title>
+</head>
+
+<body>
+  <main>
+    <!-- Rating state start -->
+    <from class="rating-card">
+      <div class="error">Please provide rating</div>
+      <div class="star-icon">
+        <img src="images/icon-star.svg" alt="" />
       </div>
-      <!-- Thank you state start -->
-      <div class="thank-you-card">
-        <div class="thank-you-icon">
-          <img src="images/illustration-thank-you.svg" alt="" />
-        </div>
-        <div class="rating-text">
-          You selected <span class="rating-result"></span> out of 5
-        </div>
-        <h1>Thank you!</h1>
-        <p>
-          We Appreciate you taking the time to give a rating. If you ever need
-          more support, don't hesitate to get in touch!
-        </p>
+      <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback
+        is appreciated to help us improve our offering!
+      </p>
+      <div class="rating">
+        <input type="radio" name="rating" id="1">
+        <label for="1">1</label>
+        <input type="radio" name="rating" id="2">
+        <label for="2">2</label>
+        <input type="radio" name="rating" id="3">
+        <label for="3">3</label>
+        <input type="radio" name="rating" id="4">
+        <label for="4">4</label>
+        <input type="radio" name="rating" id="5">
+        <label for="5">5</label>
       </div>
-    </main>
-    <script src="index.js"></script>
-  </body>
+      <button class="submit-btn" id="submit-id">Submit</button>
+    </from>
+    <!-- Thank you state start -->
+    <div class="thank-you-card">
+      <div class="thank-you-icon">
+        <img src="images/illustration-thank-you.svg" alt="" />
+      </div>
+      <div class="rating-text">
+        You selected <span class="rating-result"></span> out of 5
+      </div>
+      <h1>Thank you!</h1>
+      <p>
+        We Appreciate you taking the time to give a rating. If you ever need
+        more support, don't hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
 </html>

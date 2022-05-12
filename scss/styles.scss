@@ -79,6 +79,38 @@ p {
     line-height: 1.5rem;
 }
 
+button, label {
+    transition: all 200ms ease-in-out;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $dark-blue;
+    color: $light-grey;
+
+    $size: 3rem;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}
+
+label:hover {
+    background-color: $medium-grey;
+    color: white;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked+label {
+    background-color: $primary;
+    color: white;
+}
+
 @mixin card {
     display: flex;
     flex-direction: column;
@@ -88,10 +120,7 @@ p {
     border-radius: 1.5rem;
     row-gap: 1.5rem;
     padding: 2rem;
-    @media (min-width: 490px){
-        width: 400px;
-        height: 420px;
-    }
+    max-width: 28rem;
 }
 
 .rating-card {
@@ -108,6 +137,24 @@ p {
     width: 3rem;
 }
 
+@keyframes pulse {
+    from {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+.star-icon img {
+        animation: pulse 3s infinite;
+    }
+
 .rating {
     width: 100%;
     display: flex;
@@ -115,51 +162,22 @@ p {
     justify-content: space-between;    
 }
 
-.rating-btn {
-    cursor: pointer;
-    background-color: $dark-blue;
-    color: $medium-grey;
-    border: none;
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
-    transition: {
-            color: ease-in 0.2s;
-            background-color: ease-in 0.2s;
-        }
-}
-
-.rating-btn:hover {
-    background-color: $medium-grey;
-    color: white;
-
-}
-
-.active {
-    background-color: $primary !important; //if not set important it will set it to :hover state color when hovered
-    color: white;
-}
-
 .submit-btn{
     cursor: pointer;
     width: 100%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     border: none;
     border-radius: 3rem;
     background-color: $primary;
     color: white;
+    letter-spacing: 0.25rem;
     text-transform: uppercase;
-    transition: {
-        color: ease-in 0.2s;
-        background-color: ease-in 0.2s;
-    }
+    transition: all 200ms ease-in;
 }
 
 .submit-btn:hover {
     background-color: white;
-    color: $primary;
-    
+    color: $primary;   
 }
 
 .thank-you-card {
@@ -178,5 +196,14 @@ p {
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     background-color: $dark-blue;
+}
+
+.error {
+    display: none;
+    background-color: $dark-blue;
+    color: #ff0033;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
 }
 
